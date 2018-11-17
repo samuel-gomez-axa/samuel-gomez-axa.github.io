@@ -1,0 +1,48 @@
+$primary: #61dafb;
+a {
+  color: $primary;
+}
+.slide1__text {
+  color: $primary;
+  font-size: 2em;
+}
+.speaker {
+  position: relative;
+  display: inline-block;
+  margin-top: 2em;
+  &__company-icon {
+    position: absolute;
+    right: 0;
+    top: 0;
+    transform: translate(100%, 0);
+  }
+  &__avatar {
+    clip-path: polygon(
+      3.66% -0.37%,
+      98.65% 0%,
+      98.66% 88.43%,
+      84.39% 89.09%,
+      80.37% 100%,
+      70.82% 88.43%,
+      6.04% 88.43%
+    );
+    border: white 3px solid;
+    &-border {
+      background: white;
+      width: 250px;
+      height: 250px;
+      position: absolute;
+      top: 0;
+      left: 0;
+      clip-path: polygon(
+        -3.59% -0.37%,
+        74.47% 0.49%,
+        80.28% 71.98%,
+        67.46% 74.1%,
+        68.76% 100.97%,
+        49.54% 72.96%,
+        -1.21% 75.37%
+      );
+    }
+  }
+}

@@ -1,0 +1,21 @@
+import {
+  Get,
+  Post,
+  Body,
+  Controller,
+  Param,
+} from '@nestjs/common';
+
+@Controller('call-for-papers')
+export class CFPController {
+
+  @Get(':id')
+  find(@Param('id') id: string): string {
+    return `This action returns a CFP #${id}`;
+  }
+
+  @Post()
+  create(@Body() createCFP) {
+    return `This action creates the CFP (${createCFP.url})`;
+  }
+}
