@@ -39,10 +39,61 @@ a {
         74.47% 0.49%,
         80.28% 71.98%,
         67.46% 74.1%,
-        68.76% 100.97%,
+        74.76% 90.17%,
         49.54% 72.96%,
         -1.21% 75.37%
       );
+    }
+  }
+  &__social {
+    &-item {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      .speaker__social-img {
+        background: $primary;
+        padding: 2px;
+        border-radius: 100%;
+        margin: 0 0.5rem 0;
+        display: inline;
+      }
+    }
+    &-link {
+      .speaker__social-text {
+        color: $primary;
+        margin: 0;
+      }
+    }
+  }
+}
+.retro {
+  &__fill {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: white;
+    margin: 0.5em;
+    &-part {
+      background: white;
+      width: 100%;
+      &:nth-child(1) {
+        margin-bottom: 0.5em;
+      }
+    }
+    .retro {
+      &__img {
+        margin: 0;
+        display: inline-flex;
+        flex-basis: calc(100% / 4);
+      }
+    }
+    &--actual {
+      background: $primary;
+      .retro {
+        &__img {
+          flex-basis: calc(100% / 2);
+        }
+      }
     }
   }
 }

@@ -27,7 +27,7 @@ import {
   TableRow,
   Table,
   Text,
-  GoToAction
+  GoToAction,
 } from 'spectacle';
 import CodeSlide from 'spectacle-code-slide';
 import createTheme from 'spectacle/lib/themes/default';
@@ -37,7 +37,7 @@ import 'normalize.css/normalize.css';
 import city from '../assets/images/city.jpg';
 
 const theme = createTheme({
-  primary: '#61dafb'
+  primary: '#61dafb',
 });
 
 import Simple from './samples/simple';
@@ -56,7 +56,7 @@ import SlideSetAppear from './samples/SlideSetAppear';
 import Smooth from './samples/Smooth';
 import TableLayout from './samples/TableLayout';
 import Simple2 from './samples/Simple2';
-import Speaker from './Slide1';
+import Speaker from './Speaker';
 
 import sam from '../assets/images/samuel.png';
 import sambg from '../assets/images/site-samuel.png';
@@ -64,12 +64,28 @@ import axa from '../assets/images/logo-axa.svg';
 
 import gui from '../assets/images/guillaume.jpg';
 import guibg from '../assets/images/site-gui.png';
+import Retro from './Retro';
+
+import jquery from '../assets/images/jquery.svg';
+import css3 from '../assets/images/css3.svg';
+import react from '../assets/images/reactjs.svg';
+import sass from '../assets/images/sass.svg';
+import angular from '../assets/images/angularjs.svg';
+import bootstrap from '../assets/images/bootstrap.svg';
+import bem from '../assets/images/bem.svg';
+import question from '../assets/images/question.svg';
+
+import atom from '../assets/images/atoms.svg';
+import molecules from '../assets/images/molecules.svg';
+import organism from '../assets/images/organism.svg';
+import template from '../assets/images/template.svg';
+import pages from '../assets/images/pages.svg';
 
 export default class Presentation extends Component {
   constructor() {
     super(...arguments);
     this.state = {
-      steps: 0
+      steps: 0,
     };
     this.updateSteps = this.updateSteps.bind(this);
   }
@@ -96,6 +112,7 @@ export default class Presentation extends Component {
           companyIcon={axa}
           bg={sambg}
           twitter="gamuez"
+          github="samuel-gomez"
         />
         <Speaker
           name="Guillaume Chervet"
@@ -106,8 +123,127 @@ export default class Presentation extends Component {
           companyIcon={axa}
           bg={guibg}
           twitter="guichervet"
+          github="guillaumechervet"
         />
-        <Simple />
+        <Slide transition={['zoom', 'fade']} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="black">
+            Retro
+          </Heading>
+          <Layout>
+            <Fill className="retro__fill">
+              <Image className="retro__img" src={jquery} width={60} />
+              <Image className="retro__img" width={60} src={css3} />
+              <Image className="retro__img" width={60} src={bootstrap} />
+              <Heading
+                size={6}
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                Jquery / CSS / Bootstrap
+              </Heading>
+            </Fill>
+            <Fill className="retro__fill">
+              <Image className="retro__img" src={angular} width={60} />
+              <Image className="retro__img" width={60} src={css3} />
+              <Image className="retro__img" width={60} src={bootstrap} />
+              <Heading
+                size={6}
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                Angularjs / CSS / Bootstrap
+              </Heading>
+            </Fill>
+            <Fill className="retro__fill retro__fill--actual">
+              <div className="retro__fill-part">
+                <Image className="retro__img" src={react} width={60} />
+                <Image className="retro__img" src={question} width={60} />
+                <Heading
+                  size={6}
+                  textColor="secondary"
+                  bgColor="white"
+                  margin={10}
+                >
+                  React / ?
+                </Heading>
+              </div>
+              <div className="retro__fill-part">
+                <Image className="retro__img" width={60} src={sass} />
+                <Image className="retro__img" width={60} src={bem} />
+                <Heading size={6} textColor="secondary" margin={10}>
+                  HTML / SASS / BEM
+                </Heading>
+              </div>
+            </Fill>
+          </Layout>
+        </Slide>
+
+        <Slide transition={['zoom', 'fade']} bgColor="primary">
+          <Heading size={1} caps lineHeight={1} textColor="black">
+            Design System
+          </Heading>
+          <Layout>
+            <Fill>
+              <Image src={atom} height={130} />
+              <Heading
+                size={6}
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                Atoms
+              </Heading>
+            </Fill>
+            <Fill>
+              <Image src={molecules} height={130} />
+              <Heading
+                size={6}
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                Molecules
+              </Heading>
+            </Fill>
+            <Fill>
+              <Image src={organism} height={130} />
+              <Heading
+                size={6}
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                Organism
+              </Heading>
+            </Fill>
+            <Fill>
+              <Image src={template} height={130} />
+              <Heading
+                size={6}
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+              >
+                Templates
+              </Heading>
+            </Fill>
+            <Fill>
+              <Image src={pages} height={130} />
+              <Heading
+                size={6}
+                textColor="secondary"
+                bgColor="white"
+                margin={10}
+                height
+              >
+                Pages
+              </Heading>
+            </Fill>
+          </Layout>
+        </Slide>
+
         <WithCode />
         <WithSpeakerNotes />
         <ComponentPlay />
@@ -148,23 +284,23 @@ export default class Presentation extends Component {
           ranges={[
             {
               loc: [0, 7],
-              title: '@Decorators FTW'
+              title: '@Decorators FTW',
             },
             {
               loc: [8, 10],
               title: "Controller's class declaration",
-              note: 'https://app/call-for-papers/*'
+              note: 'https://app/call-for-papers/*',
             },
             {
               loc: [11, 15],
               title: 'HTTP GET route',
-              note: 'GET https://app/call-for-papers/{id}'
+              note: 'GET https://app/call-for-papers/{id}',
             },
             {
               loc: [16, 20],
               title: 'HTTP POST route with a @Body',
-              note: "Request's body is extracted in createCFP"
-            }
+              note: "Request's body is extracted in createCFP",
+            },
           ]}
         />
       </Deck>
