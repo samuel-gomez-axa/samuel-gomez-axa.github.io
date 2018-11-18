@@ -30,7 +30,7 @@ const Speaker = ({
   twitter,
   github,
 }) => (
-  <Slide transition={['zoom']} bgImage={bg} bgDarken={0.75}>
+  <Slide id={`${name}`} transition={['zoom']} bgImage={bg} bgDarken={0.75}>
     <Heading size={1} caps textColor="primary">
       {name}
     </Heading>

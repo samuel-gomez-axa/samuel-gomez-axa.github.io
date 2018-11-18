@@ -40,22 +40,6 @@ const theme = createTheme({
   primary: '#61dafb',
 });
 
-import Simple from './samples/simple';
-import WithCode from './samples/withCode';
-import WithSpeakerNotes from './samples/withSpeakerNotes';
-import ComponentPlay from './samples/ComponentPlayground';
-import Appears from './samples/Appears';
-import Animation from './samples/Animation';
-import WithGotoAction from './samples/WithGotoAction';
-import AppearsState from './samples/AppearsState';
-import WithLayout from './samples/WithLayout';
-import WithBlockQuote from './samples/WithBlockQuote';
-import WithMarkdown from './samples/WithMarkdown';
-import WithMarkdownSlides from './samples/WithMarkdownSlides';
-import SlideSetAppear from './samples/SlideSetAppear';
-import Smooth from './samples/Smooth';
-import TableLayout from './samples/TableLayout';
-import Simple2 from './samples/Simple2';
 import Speaker from './Speaker';
 
 import sam from '../assets/images/samuel.png';
@@ -64,7 +48,6 @@ import axa from '../assets/images/logo-axa.svg';
 
 import gui from '../assets/images/guillaume.jpg';
 import guibg from '../assets/images/site-gui.png';
-import Retro from './Retro';
 
 import jquery from '../assets/images/jquery.svg';
 import css3 from '../assets/images/css3.svg';
@@ -80,6 +63,13 @@ import molecules from '../assets/images/molecules.svg';
 import organism from '../assets/images/organism.svg';
 import template from '../assets/images/template.svg';
 import pages from '../assets/images/pages.svg';
+import lerna from '../assets/images/lerna.jpg';
+import npm from '../assets/images/npm.svg';
+
+import notedesign from './notes/notedesign';
+import notebem from '../assets/notes/notebem';
+import notetoolkit from '../assets/notes/notetoolkit';
+import notelerna from '../assets/notes/notelerna';
 
 export default class Presentation extends Component {
   constructor() {
@@ -125,184 +115,182 @@ export default class Presentation extends Component {
           twitter="guichervet"
           github="guillaumechervet"
         />
-        <Slide transition={['zoom', 'fade']} bgColor="primary">
+        <Slide
+          transition={['zoom', 'fade']}
+          bgColor="primary"
+          notes={notetoolkit}
+        >
           <Heading size={1} caps lineHeight={1} textColor="black">
             Retro
           </Heading>
           <Layout>
-            <Fill className="retro__fill">
-              <Image className="retro__img" src={jquery} width={60} />
-              <Image className="retro__img" width={60} src={css3} />
-              <Image className="retro__img" width={60} src={bootstrap} />
-              <Heading
-                size={6}
-                textColor="secondary"
-                bgColor="white"
-                margin={10}
-              >
-                Jquery / CSS / Bootstrap
-              </Heading>
-            </Fill>
-            <Fill className="retro__fill">
-              <Image className="retro__img" src={angular} width={60} />
-              <Image className="retro__img" width={60} src={css3} />
-              <Image className="retro__img" width={60} src={bootstrap} />
-              <Heading
-                size={6}
-                textColor="secondary"
-                bgColor="white"
-                margin={10}
-              >
-                Angularjs / CSS / Bootstrap
-              </Heading>
-            </Fill>
-            <Fill className="retro__fill retro__fill--actual">
-              <div className="retro__fill-part">
-                <Image className="retro__img" src={react} width={60} />
-                <Image className="retro__img" src={question} width={60} />
+            <Appear fid="1">
+              <Fill className="retro__fill">
+                <Image className="retro__img" src={jquery} width={60} />
+                <Image className="retro__img" width={60} src={css3} />
+                <Image className="retro__img" width={60} src={bootstrap} />
                 <Heading
                   size={6}
                   textColor="secondary"
                   bgColor="white"
                   margin={10}
                 >
-                  React / ?
+                  Jquery / CSS / Bootstrap
                 </Heading>
-              </div>
-              <div className="retro__fill-part">
-                <Image className="retro__img" width={60} src={sass} />
-                <Image className="retro__img" width={60} src={bem} />
-                <Heading size={6} textColor="secondary" margin={10}>
-                  HTML / SASS / BEM
+              </Fill>
+            </Appear>
+            <Appear fid="2">
+              <Fill className="retro__fill">
+                <Image className="retro__img" src={angular} width={60} />
+                <Image className="retro__img" width={60} src={css3} />
+                <Image className="retro__img" width={60} src={bootstrap} />
+                <Heading
+                  size={6}
+                  textColor="secondary"
+                  bgColor="white"
+                  margin={10}
+                >
+                  Angularjs / CSS / Bootstrap
                 </Heading>
-              </div>
-            </Fill>
+              </Fill>
+            </Appear>
+            <Appear fid="3">
+              <Fill className="retro__fill retro__fill--actual">
+                <div className="retro__fill-part">
+                  <Image className="retro__img" src={react} width={60} />
+                  <Image className="retro__img" src={question} width={60} />
+                  <Heading
+                    size={6}
+                    textColor="secondary"
+                    bgColor="white"
+                    margin={10}
+                  >
+                    React / ?
+                  </Heading>
+                </div>
+                <div className="retro__fill-part">
+                  <Image className="retro__img" width={60} src={sass} />
+                  <Image className="retro__img" width={60} src={bem} />
+                  <Heading size={6} textColor="secondary" margin={10}>
+                    HTML / SASS / BEM
+                  </Heading>
+                </div>
+              </Fill>
+            </Appear>
           </Layout>
         </Slide>
 
-        <Slide transition={['zoom', 'fade']} bgColor="primary">
+        <Slide
+          transition={['zoom', 'fade']}
+          bgColor="primary"
+          notes={notedesign}
+        >
           <Heading size={1} caps lineHeight={1} textColor="black">
             Design System
           </Heading>
+          <Heading size={4} caps lineHeight={1} textColor="white">
+            avec l'Atomic Design
+          </Heading>
           <Layout>
-            <Fill>
-              <Image src={atom} height={130} />
-              <Heading
-                size={6}
-                textColor="secondary"
-                bgColor="white"
-                margin={10}
-              >
-                Atoms
-              </Heading>
-            </Fill>
-            <Fill>
-              <Image src={molecules} height={130} />
-              <Heading
-                size={6}
-                textColor="secondary"
-                bgColor="white"
-                margin={10}
-              >
-                Molecules
-              </Heading>
-            </Fill>
-            <Fill>
-              <Image src={organism} height={130} />
-              <Heading
-                size={6}
-                textColor="secondary"
-                bgColor="white"
-                margin={10}
-              >
-                Organism
-              </Heading>
-            </Fill>
-            <Fill>
-              <Image src={template} height={130} />
-              <Heading
-                size={6}
-                textColor="secondary"
-                bgColor="white"
-                margin={10}
-              >
-                Templates
-              </Heading>
-            </Fill>
-            <Fill>
-              <Image src={pages} height={130} />
-              <Heading
-                size={6}
-                textColor="secondary"
-                bgColor="white"
-                margin={10}
-                height
-              >
-                Pages
-              </Heading>
-            </Fill>
+            <Appear fid="1">
+              <Fill>
+                <Image src={atom} height={130} />
+                <Heading
+                  size={6}
+                  textColor="secondary"
+                  bgColor="white"
+                  margin={10}
+                >
+                  Atoms
+                </Heading>
+              </Fill>
+            </Appear>
+            <Appear fid="2">
+              <Fill>
+                <Image src={molecules} height={130} />
+                <Heading
+                  size={6}
+                  textColor="secondary"
+                  bgColor="white"
+                  margin={10}
+                >
+                  Molecules
+                </Heading>
+              </Fill>
+            </Appear>
+            <Appear fid="3">
+              <Fill>
+                <Image src={organism} height={130} />
+                <Heading
+                  size={6}
+                  textColor="secondary"
+                  bgColor="white"
+                  margin={10}
+                >
+                  Organism
+                </Heading>
+              </Fill>
+            </Appear>
+            <Appear fid="4">
+              <Fill>
+                <Image src={template} height={130} />
+                <Heading
+                  size={6}
+                  textColor="secondary"
+                  bgColor="white"
+                  margin={10}
+                >
+                  Templates
+                </Heading>
+              </Fill>
+            </Appear>
+            <Appear fid="5">
+              <Fill>
+                <Image src={pages} height={130} />
+                <Heading
+                  size={6}
+                  textColor="secondary"
+                  bgColor="white"
+                  margin={10}
+                  height
+                >
+                  Pages
+                </Heading>
+              </Fill>
+            </Appear>
           </Layout>
         </Slide>
 
-        <WithCode />
-        <WithSpeakerNotes />
-        <ComponentPlay />
-        <AppearsState />
-        <WithGotoAction theme={theme} />
         <Slide
-          transition={['slide']}
-          bgImage={city.replace('/', '')}
-          bgDarken={0.75}
+          transitionIn={['zoom', 'fade']}
+          transitionOut={['slide', 'fade']}
+          bgColor="primary"
+          notes={notebem}
         >
-          <Appear fid="1">
-            <Heading size={1} caps fit textColor="primary">
-              Full Width
-            </Heading>
-          </Appear>
-          <Appear fid="2">
-            <Heading size={1} caps fit textColor="tertiary">
-              Adjustable Darkness
-            </Heading>
-          </Appear>
-          <Appear fid="3">
-            <Heading size={1} caps fit textColor="primary">
-              Background Imagery
-            </Heading>
-          </Appear>
+          <Heading size={1} caps lineHeight={1} textColor="black">
+            BEM
+          </Heading>
+          <Heading size={4} caps lineHeight={1} textColor="white">
+            Block Element Modifier
+          </Heading>
+          <CodePane
+            lang="sass"
+            source={require('raw-loader!../assets/code/bem.style')}
+            margin="20px auto"
+            overflow="overflow"
+          />
         </Slide>
-        <WithLayout />
-        <WithBlockQuote />
-        <WithMarkdown />
-        <Smooth />
-        <TableLayout />
-        <Simple2 />
-        <CodeSlide
-          transition={['fade']}
-          lang="jsx"
-          textSize=".6em"
-          code={require('raw-loader!../assets/code/controller.basic')}
-          ranges={[
-            {
-              loc: [0, 7],
-              title: '@Decorators FTW',
-            },
-            {
-              loc: [8, 10],
-              title: "Controller's class declaration",
-              note: 'https://app/call-for-papers/*',
-            },
-            {
-              loc: [11, 15],
-              title: 'HTTP GET route',
-              note: 'GET https://app/call-for-papers/{id}',
-            },
-            {
-              loc: [16, 20],
-              title: 'HTTP POST route with a @Body',
-              note: "Request's body is extracted in createCFP",
-            },
-          ]}
-        />
+
+        <Slide transition={['zoom']} bgColor="primary" notes={notelerna}>
+          <Heading size={1} fit caps lineHeight={1} textColor="black">
+            Lerna & NPM
+          </Heading>
+          <Heading size={1} fit caps>
+            Monorepo et packages
+          </Heading>
+          <Image src={lerna} />
+          <Image src={npm} />
+        </Slide>
       </Deck>
     );
   }
