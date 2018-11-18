@@ -69,7 +69,7 @@ import pages from '../assets/images/pages.svg';
 import lerna from '../assets/images/lerna.jpg';
 import npm from '../assets/images/npm.svg';
 
-import notedesign from './notes/notedesign';
+import notedesign from '../assets/notes/notedesign';
 import notebem from '../assets/notes/notebem';
 import notetoolkit from '../assets/notes/notetoolkit';
 import notelerna from '../assets/notes/notelerna';
