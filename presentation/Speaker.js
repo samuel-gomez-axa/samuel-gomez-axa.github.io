@@ -11,6 +11,7 @@ import {
   Text,
   Image,
   Link,
+  Notes,
 } from 'spectacle';
 import './style.scss';
 
@@ -24,13 +25,19 @@ const Speaker = ({
   company,
   companyIcon,
   avatar,
-  skills,
   bg,
   website,
   twitter,
   github,
 }) => (
   <Slide id={`${name}`} transition={['zoom']} bgImage={bg} bgDarken={0.75}>
+    <Notes>
+      <h4>Slide notes</h4>
+      <ol>
+        <li>First note</li>
+        <li>Second note</li>
+      </ol>
+    </Notes>
     <Heading size={1} caps textColor="primary">
       {name}
     </Heading>

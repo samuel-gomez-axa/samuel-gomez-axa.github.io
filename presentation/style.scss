@@ -1,4 +1,6 @@
 $primary: #61dafb;
+$other: #bb84ff;
+
 a {
   color: $primary;
 }
@@ -88,7 +90,7 @@ a {
       }
     }
     &--actual {
-      background: $primary;
+      background: $other;
       .retro {
         &__img {
           flex-basis: calc(100% / 2);

@@ -38,6 +38,9 @@ import city from '../assets/images/city.jpg';
 
 const theme = createTheme({
   primary: '#61dafb',
+  third: '#49d295',
+  fourth: '#FF637E',
+  other: '#BB84FF',
 });
 
 import Speaker from './Speaker';
@@ -70,6 +73,7 @@ import notedesign from './notes/notedesign';
 import notebem from '../assets/notes/notebem';
 import notetoolkit from '../assets/notes/notetoolkit';
 import notelerna from '../assets/notes/notelerna';
+import notelivecode from '../assets/notes/notelivecode';
 
 export default class Presentation extends Component {
   constructor() {
@@ -117,7 +121,7 @@ export default class Presentation extends Component {
         />
         <Slide
           transition={['zoom', 'fade']}
-          bgColor="primary"
+          bgColor="other"
           notes={notetoolkit}
         >
           <Heading size={1} caps lineHeight={1} textColor="black">
@@ -264,7 +268,7 @@ export default class Presentation extends Component {
         <Slide
           transitionIn={['zoom', 'fade']}
           transitionOut={['slide', 'fade']}
-          bgColor="primary"
+          bgColor="fourth"
           notes={notebem}
         >
           <Heading size={1} caps lineHeight={1} textColor="black">
@@ -290,6 +294,44 @@ export default class Presentation extends Component {
           </Heading>
           <Image src={lerna} />
           <Image src={npm} />
+        </Slide>
+
+        <Slide transition={['spin']} bgColor="third" notes={notelivecode}>
+          <Heading size={1} fit caps lineHeight={1} textColor="black">
+            Live Coding
+          </Heading>
+          <Heading size={1} fit caps>
+            Part 1 : Installation, mise en place et première page
+          </Heading>
+        </Slide>
+
+        <Slide transition={['zoom']} bgColor="primary">
+          <Heading size={1} fit caps lineHeight={1} textColor="black">
+            Open source !
+          </Heading>
+          <List>
+            <ListItem>
+              <Link
+                textColor="black"
+                href="https://www.npmjs.com/search?q=%40axa-fr%2Freact-toolkit"
+              >
+                Package NPM
+              </Link>
+            </ListItem>
+            <ListItem>
+              <Link
+                textColor="black"
+                href="https://github.com/AxaGuilDEv/react-toolkit"
+              >
+                Github
+              </Link>
+            </ListItem>
+          </List>
+        </Slide>
+        <Slide transition={['fade']} bgColor="white">
+          <Heading size={1} fit caps lineHeight={1} textColor="black">
+            Merci !
+          </Heading>
         </Slide>
       </Deck>
     );
