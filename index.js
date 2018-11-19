@@ -4,6 +4,8 @@ import ReactDOM from 'react-dom';
 import { AppContainer } from 'react-hot-loader';
 import Redbox from 'redbox-react';
 
+import Presentation from './presentation';
+
 const CustomErrorReporter = ({ error }) => <Redbox error={error} />;
 
 CustomErrorReporter.propTypes = {
@@ -12,7 +14,7 @@ CustomErrorReporter.propTypes = {
 
 ReactDOM.render(
   <AppContainer errorReporter={CustomErrorReporter}>
-    <p>Hello</p>
+    <Presentation />
   </AppContainer>,
   document.getElementById('root')
 );
