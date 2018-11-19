@@ -16,7 +16,7 @@ notifications:
     on_failure: always
 
 script:
-  - npm run build --base-href https://samuel-gomez-axa.github.io
+  - npm run build
 
 deploy:
   provider: pages
@@ -24,5 +24,6 @@ deploy:
   keep-history: true
   github-token: $GITHUB_TOKEN
   local_dir: dist/
+  target-branch: master
   on:
     branch: master
