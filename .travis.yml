@@ -1,7 +1,6 @@
 language: node_js
 
 env:
-  - NPM_PUBLISH_VERSION=none
   - NODE_ENV=production
 
 node_js:
@@ -14,7 +13,7 @@ branches:
     - master
 
 install:
-  - yarn install
+  - npm install
 
 notifications:
   email:
@@ -22,4 +21,4 @@ notifications:
     on_failure: always
 
 script:
-  - yarn run build
+  - npm run build
