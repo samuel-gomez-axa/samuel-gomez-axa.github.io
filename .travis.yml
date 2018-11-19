@@ -1,5 +1,7 @@
 language: node_js
 
+dist: trusty
+
 node_js:
   - '8'
 
@@ -23,7 +25,8 @@ deploy:
   skip-cleanup: true
   keep-history: true
   github-token: $GITHUB_TOKEN
-  local_dir: /
+  local_dir: public
   target-branch: master
+  repo: samuel-gomez-axa/samuel-gomez-axa.github.io
   on:
     branch: master
