@@ -1,0 +1,29 @@
+language: node_js
+
+node_js:
+  - '8'
+
+branches:
+  only:
+    - master
+
+install:
+  - npm install
+
+notifications:
+  email:
+    on_success: change
+    on_failure: always
+
+script:
+  - npm run build
+
+deploy:
+  provider: pages
+  skip-cleanup: true
+  keep-history: true
+  github-token: $GITHUB_TOKEN
+  local_dir: /
+  target-branch: master
+  on:
+    branch: master

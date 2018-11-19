@@ -1,0 +1,12 @@
+/* The name of the block, which is also the namespace of its elements and modifiers.*/
+.block {
+}
+
+/* The block namespace followed by a double underscore and the element name. */
+.block__element {
+}
+
+/* The block or element namespace followed by a double hyphen and the modifier name. */
+.block--modifier,
+.block__element--modifier {
+}
