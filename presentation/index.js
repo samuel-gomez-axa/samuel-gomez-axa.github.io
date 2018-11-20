@@ -55,6 +55,7 @@ import notebem from '../assets/notes/notebem';
 import notetoolkit from '../assets/notes/notetoolkit';
 import notelerna from '../assets/notes/notelerna';
 import notelivecode from '../assets/notes/notelivecode';
+import notemerci from '../assets/notes/notemerci';
 
 export default () => (
   <Deck transition={['zoom', 'slide']} transitionDuration={500} theme={theme}>
@@ -74,7 +75,7 @@ export default () => (
       job="Software Engineer Senior"
       company="Axa"
       avatar={gui}
-      website="https://www.guillaume-chervet.fr/"
+      website="https://www.guillaume-chervet.fr"
       companyIcon={axa}
       bg={guibg}
       twitter="guichervet"
@@ -101,7 +102,7 @@ export default () => (
             <Image className="retro__img" width={60} src={css3} />
             <Image className="retro__img" width={60} src={bootstrap} />
             <Heading size={6} textColor="secondary" bgColor="white" margin={10}>
-              Angularjs / CSS / Bootstrap
+              Angularjs / SASS / Bootstrap / Form Generator
             </Heading>
           </Fill>
         </Appear>
@@ -251,7 +252,7 @@ export default () => (
         </ListItem>
       </List>
     </Slide>
-    <Slide transition={['fade']} bgColor="white">
+    <Slide transition={['fade']} bgColor="white" notes={notemerci}>
       <Heading size={1} fit caps lineHeight={1} textColor="black">
         Merci !
       </Heading>
