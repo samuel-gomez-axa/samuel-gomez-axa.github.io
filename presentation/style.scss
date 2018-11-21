@@ -1,5 +1,7 @@
 $primary: #61dafb;
 $other: #bb84ff;
+$gray: #888;
+$axa: #00008f;
 
 a {
   color: $primary;
@@ -8,6 +10,16 @@ a {
   color: $primary;
   font-size: 2em;
 }
+.splash {
+  max-width: inherit !important;
+  &__part {
+    padding: 1em;
+  }
+  &__img {
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
+  }
+}
+
 .speaker {
   position: relative;
   display: inline-block;
@@ -69,33 +81,53 @@ a {
   }
 }
 .retro {
+  max-width: inherit !important;
+  text-align: center;
   &__fill {
     display: flex;
     justify-content: space-around;
+    align-items: center;
     flex-wrap: wrap;
+    margin: 0 1em 1em 1em;
+    padding: 0 0.5em 1em 0.5em;
     background: white;
-    margin: 0.5em;
+    box-shadow: 0 0 10px 5px rgba(0, 0, 0, 0.3);
     &-part {
-      background: white;
-      width: 100%;
-      &:nth-child(1) {
-        margin-bottom: 0.5em;
+      width: 50%;
+
+      &:nth-child(2) {
+        border-right: 1px solid $gray;
       }
     }
     .retro {
       &__img {
         margin: 0;
         display: inline-flex;
-        flex-basis: calc(100% / 4);
+        flex-basis: calc(100% / 6);
+        background: white;
       }
     }
     &--actual {
-      background: $other;
+      background: white;
       .retro {
         &__img {
           flex-basis: calc(100% / 2);
         }
       }
     }
+  }
+  &__title {
+    display: block !important;
+    color: $axa !important;
+    text-align: center !important;
+    margin-bottom: 0.5em !important;
+    width: 100%;
+  }
+  &__list {
+    text-align: center !important;
+    list-style: none;
+    padding: 0.5em 0 0 0 !important;
+    margin: 0;
+    border-top: 1px solid $gray;
   }
 }
