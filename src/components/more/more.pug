@@ -1,0 +1,3 @@
+mixin More({target='', href='/', title="Plus d'info", icon = 'simpleArrowRight', modifier='more'})
+	a(href=href target=target title=title class=`${prefix}-more${modifier !== '' ? ` ${prefix}-more--${modifier}` : ''}`)
+		+Icon({id:icon})

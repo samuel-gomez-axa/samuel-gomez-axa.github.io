@@ -1,0 +1,43 @@
+{
+  "items": [
+    {
+      "label": "Axa Web Center",
+      "href": "https://www.axawebcenter.fr/",
+      "title": "Axa Web Center",
+      "target": "_blank"
+    },
+    {
+      "label": "Github",
+      "href": "https://github.com/AxaGuilDEv",
+      "title": "Axa Open Source",
+      "target": "_blank"
+    },
+    {
+      "label": "Blog",
+      "href": "https://blog.axawebcenter.fr/",
+      "title": "Blog Axa Web Center",
+      "target": "_blank"
+    }
+  ],
+
+  "socials": [
+    {
+      "label": "Google+",
+      "lnk": "https://plus.google.com/104180134865994577750",
+      "title": "Voir mon Google +",
+      "className": "sg-menu-googleplus"
+    },
+    {
+      "label": "Viadeo",
+      "lnk": "http://fr.viadeo.com/fr/profile/samuel.gomez",
+      "title": "Voir mon Viadeo",
+      "className": "sg-menu-viadeo"
+    },
+    {
+      "label": "Linkedin",
+      "lnk": "https://fr.linkedin.com/in/samuel-gomez-31654283",
+      "title": "Voir mon Linkedin",
+      "className": "sg-menu-linkedin"
+    }
+  ]
+}
